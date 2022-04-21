@@ -1,0 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/04/15 01:47:51 by apommier          #+#    #+#              #
+#    Updated: 2022/04/20 05:40:02 by apommier         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME	= a.out
+SRCS	= main.cpp\
+			Contact.cpp\
+			PhoneBook.cpp
+			
+OBJS	= ${SRCS:.cpp=.o}
+CC		= c++
+CFLAGS	= -Wall -Wextra -Werror -g
+RM		= rm -rf
+
+${NAME}: ${OBJS}
+		${CC} ${LIB} ${OBJS} -o ${NAME} 
+
+all:	${NAME}
+
+clean:
+		@${RM} ${OBJS}
+
+fclean:	clean
+		@${RM} ${NAME}
+
+re: 	fclean all
+
+.PHONY: all clean fclean re
