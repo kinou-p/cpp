@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/08 16:30:06 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/10 13:20:28 by apommier         ###   ########.fr       */
+/*   Created: 2022/06/08 16:30:20 by apommier          #+#    #+#             */
+/*   Updated: 2022/06/10 13:55:13 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main()
+Zombie::Zombie(void)
 {
-	std::cout <<  "   --Zombie on the Heap--" << std::endl;
-	Zombie	*heap = newZombie("Bob");
-	heap->announce();
-	delete heap;
-	std::cout <<  "   --Zombie on the Stack--" << std::endl;
-	randomChump("John");
-	return (0);
+	std::cout << "Zombie created\n";
+	return ;
+}
+
+Zombie::~Zombie(void)
+{	
+	std::cout << "Zombie " << this->_name << " destroyed\n";
+	return ;
+}
+
+void	Zombie::announce(void)
+{
+	std::cout << this->_name <<  ": BraiiiiiiinnnzzzZ...\n";
+}
+
+void	Zombie::setName(std::string name)
+{
+	this->_name = name;
 }
