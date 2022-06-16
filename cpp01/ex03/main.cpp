@@ -6,9 +6,12 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 20:12:10 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/10 20:12:47 by apommier         ###   ########.fr       */
+/*   Updated: 2022/06/16 22:57:13 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
