@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 21:23:58 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/16 23:32:27 by apommier         ###   ########.fr       */
+/*   Updated: 2022/06/19 16:07:36 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ class HumanB {
 
 	public:
 	
+		HumanB(std::string name);
 		HumanB(const std::string name, Weapon Weapon);
-		HumanB (const std::string name);
 		~HumanB(void);
 		void attack(void) const;
-		void setWeapon(Weapon Weapon);
+		void setWeapon(Weapon &newWeapon);
 
 	private:
 		
 		std::string	_name;
-		std::string	&_Weapon;
+		Weapon	*_Weapon;
 
 };
 
