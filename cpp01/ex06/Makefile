@@ -6,13 +6,13 @@
 #    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/21 23:38:45 by apommier          #+#    #+#              #
-#    Updated: 2022/06/21 23:40:23 by apommier         ###   ########.fr        #
+#    Updated: 2022/06/21 23:46:38 by apommier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= harlFilter
 SRCS	= main.cpp\
-		
+			Harl.cpp
 			
 OBJS	= ${SRCS:.cpp=.o}
 CC		= c++
