@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 05:22:53 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/13 13:13:24 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/18 22:57:33 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap {
 	public:
-	
+
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& copy);
 		~ClapTrap();

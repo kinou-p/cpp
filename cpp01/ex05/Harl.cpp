@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 22:07:00 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/21 23:23:28 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/19 10:42:46 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Harl::~Harl()
 
 void Harl::complain(std::string level)
 {
-	void		(Harl::*complaint[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	void (Harl::*complaint[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string	levelTab[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	for (int i = 0; i < 4 ; i++)
 	{

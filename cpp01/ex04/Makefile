@@ -6,18 +6,20 @@
 #    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/19 16:15:23 by apommier          #+#    #+#              #
-#    Updated: 2022/06/19 16:15:32 by apommier         ###   ########.fr        #
+#    Updated: 2022/07/18 20:52:38 by apommier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= a.out
 SRCS	= main.cpp\
-		
-			
+
 OBJS	= ${SRCS:.cpp=.o}
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror
 RM		= rm -rf
+
+.cpp.o:
+		$(CC) ${CFLAGS} -c $< -o $(<:.cpp=.o)
 
 ${NAME}: ${OBJS}
 		${CC} ${LIB} ${OBJS} -o ${NAME} 

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/19 16:15:21 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/21 22:02:37 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/18 16:45:54 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int ac, char **av)
 	std::string allFile;
 	std::string buffer;
 	std::ofstream outfile((std::string)av[1] + ".replace");
-	
+
 	if (ac != 4 || !verifyPathname(av[1], av[2], av[3]) || !fileOne)
 	{
 		std::cout << "Bad argument\n";
