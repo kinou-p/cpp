@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:55:40 by apommier          #+#    #+#             */
-/*   Updated: 2022/04/21 18:58:19 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/20 12:19:30 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ int	main(int ac, char **av)
 		std::cout << "too much arguments\n";
 		return (0);
 	}
-	//line = "nothing";
 	std::cout << "Enter a command : ADD | SEARCH | EXIT" << std::endl;
 	while (line != "EXIT")
 	{
@@ -74,6 +73,5 @@ int	main(int ac, char **av)
 		else
 			std::cout << "Invalid command" << std::endl;
 	}
-	//std::cout << "exit\n";
 	return (0);
 }

@@ -6,12 +6,13 @@
 #    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/15 01:47:51 by apommier          #+#    #+#              #
-#    Updated: 2022/07/18 20:52:38 by apommier         ###   ########.fr        #
+#    Updated: 2022/07/20 12:51:45 by apommier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= megaphone
-SRCS	= megaphone.cpp
+NAME	= a.out
+SRCS	= Account.cpp\
+			tests.cpp
 			
 OBJS	= ${SRCS:.cpp=.o}
 CC		= c++
