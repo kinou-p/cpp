@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:37:12 by apommier          #+#    #+#             */
-/*   Updated: 2022/04/21 18:32:43 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/21 09:55:59 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ std::string	Contact::GetInfo(int index)
 {
 	std::string str;
 	 
-	str = this->GetRealInfo(index);
+	str = this->getOneInfo(index);
 	if (str.size() > 10)
 	{
 		str.resize(10);
@@ -41,7 +41,7 @@ std::string	Contact::GetInfo(int index)
 	return (str);
 }
 
-std::string	Contact::GetRealInfo(int index)
+std::string	Contact::getOneInfo(int index)
 {
 	if (index == 0)
 		return (this->_first_name);

@@ -6,7 +6,7 @@
 #    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/15 01:47:51 by apommier          #+#    #+#              #
-#    Updated: 2022/07/18 20:52:38 by apommier         ###   ########.fr        #
+#    Updated: 2022/07/22 07:48:18 by apommier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRCS	= megaphone.cpp
 			
 OBJS	= ${SRCS:.cpp=.o}
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
 
 .cpp.o:

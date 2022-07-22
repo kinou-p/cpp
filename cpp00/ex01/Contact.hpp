@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:37:15 by apommier          #+#    #+#             */
-/*   Updated: 2022/04/21 18:00:26 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/21 09:55:59 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Contact {
 		~Contact(void);
 		void FillContact(std::string *info);
 		std::string	GetInfo(int index);
-		std::string	GetRealInfo(int index);
+		std::string	getOneInfo(int index);
 
 	private:
 	

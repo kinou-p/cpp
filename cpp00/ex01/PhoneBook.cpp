@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:37:20 by apommier          #+#    #+#             */
-/*   Updated: 2022/04/21 18:32:32 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/21 20:05:15 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,20 @@
 
 PhoneBook::PhoneBook(void)
 {
-	int index = 0;
-	
+	this->_NbrContact = -1;
+	while (this->_NbrContact < 8)
+		this->_Contact[this->_NbrContact++] = 0;
 	this->_NbrContact = 0;
-	while (index < 8)
-		_Contact[index++] = 0;
-	return ;
 }
 
 PhoneBook::~PhoneBook(void)
-{
-	return ;	
+{	
 }
 
 void PhoneBook::StoreContact(Contact *NewContact)
 {
+	if (_Contact[this->_NbrContact])
+		delete _Contact[this->_NbrContact] ;
 	_Contact[this->_NbrContact] = NewContact;
 	if (this->_NbrContact == 8)
 		this->_NbrContact = 0;
@@ -43,11 +42,11 @@ void PhoneBook::PrintContact(int index)
 		std::cout << "There is no contact at this index" << std::endl;
 		return ;
 	}
-	std::cout << std::setw(10) << "First name: " << this->_Contact[index]->GetRealInfo(0) << std::endl;
-	std::cout << std::setw(10) << "Last name: " << this->_Contact[index]->GetRealInfo(1) << std::endl;
-	std::cout << std::setw(10) << "Nickname: " << this->_Contact[index]->GetRealInfo(2) << std::endl;
-	std::cout << std::setw(10) << "Phone number: " << this->_Contact[index]->GetRealInfo(3) << std::endl;
-	std::cout << std::setw(10) << "Darkest secret: " << this->_Contact[index]->GetRealInfo(4) << std::endl;
+	std::cout << std::setw(10) << "First name: " << this->_Contact[index]->getOneInfo(0) << std::endl;
+	std::cout << std::setw(10) << "Last name: " << this->_Contact[index]->getOneInfo(1) << std::endl;
+	std::cout << std::setw(10) << "Nickname: " << this->_Contact[index]->getOneInfo(2) << std::endl;
+	std::cout << std::setw(10) << "Phone number: " << this->_Contact[index]->getOneInfo(3) << std::endl;
+	std::cout << std::setw(10) << "Darkest secret: " << this->_Contact[index]->getOneInfo(4) << std::endl;
 }
 
 void PhoneBook::PrintIndex()
@@ -66,7 +65,7 @@ void PhoneBook::PrintIndex()
 	}
 	if (!index)
 		std::cout << "There is no contact\n";
-	else
+	if (index)
 	{
 		while (1)
 		{
@@ -76,16 +75,22 @@ void PhoneBook::PrintIndex()
 				std::cout << "Bad entry" << std::endl;
 			else
 			{
-				index = nbr[0] - 48;
+				index = nbr[0] - '0';
 				if (!index || index > 8)
 					std::cout << "Bad entry" << std::endl;
 				else
 				{
+					std::cout << index << "index \n";
 					this->PrintContact(index - 1);
-					break;
+					return ;
 				}
 			}
 		}
 	}
 }
 
+void PhoneBook::deleteContact()
+{
+	for (int i = 0; this->_Contact[i] && i < 8; i++)
+		delete this->_Contact[i];
+}

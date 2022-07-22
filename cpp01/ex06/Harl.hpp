@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 23:39:11 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/21 23:44:12 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 09:41:32 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Harl {
 		Harl();
 		~Harl();
 
+		int chooseComplain(std::string level);
 		void complain(std::string level);
 
 	private:

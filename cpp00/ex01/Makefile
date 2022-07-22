@@ -6,18 +6,18 @@
 #    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/15 01:47:51 by apommier          #+#    #+#              #
-#    Updated: 2022/07/18 20:52:38 by apommier         ###   ########.fr        #
+#    Updated: 2022/07/22 07:49:19 by apommier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= a.out
+NAME	= phoneBook
 SRCS	= main.cpp\
 			Contact.cpp\
 			PhoneBook.cpp
 			
 OBJS	= ${SRCS:.cpp=.o}
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -g
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 
 RM		= rm -rf
 
 .cpp.o:

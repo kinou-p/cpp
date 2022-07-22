@@ -6,17 +6,17 @@
 #    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/15 01:47:51 by apommier          #+#    #+#              #
-#    Updated: 2022/07/20 12:51:45 by apommier         ###   ########.fr        #
+#    Updated: 2022/07/22 07:49:56 by apommier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= a.out
+NAME	= account
 SRCS	= Account.cpp\
 			tests.cpp
 			
 OBJS	= ${SRCS:.cpp=.o}
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -std=c++98
 RM		= rm -rf
 
 .cpp.o:
