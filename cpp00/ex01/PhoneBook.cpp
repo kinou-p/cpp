@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:37:20 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/21 20:05:15 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 12:41:59 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 PhoneBook::PhoneBook(void)
 {
-	this->_NbrContact = -1;
-	while (this->_NbrContact < 8)
-		this->_Contact[this->_NbrContact++] = 0;
 	this->_NbrContact = 0;
+	this->_nbrContactSet = 0;
 }
 
 PhoneBook::~PhoneBook(void)
@@ -26,27 +24,26 @@ PhoneBook::~PhoneBook(void)
 
 void PhoneBook::StoreContact(Contact *NewContact)
 {
-	if (_Contact[this->_NbrContact])
-		delete _Contact[this->_NbrContact] ;
-	_Contact[this->_NbrContact] = NewContact;
-	if (this->_NbrContact == 8)
+	if (this->_NbrContact >= 8)
 		this->_NbrContact = 0;
-	else
-		this->_NbrContact++;
+	_Contact[this->_NbrContact] = *NewContact;
+	this->_NbrContact++;
+	this->_nbrContactSet++;
+	
 }
 
 void PhoneBook::PrintContact(int index)
 {
-	if (!this->_Contact[index])
+	if (index >= 8 || index >= this->_nbrContactSet)
 	{
 		std::cout << "There is no contact at this index" << std::endl;
 		return ;
 	}
-	std::cout << std::setw(10) << "First name: " << this->_Contact[index]->getOneInfo(0) << std::endl;
-	std::cout << std::setw(10) << "Last name: " << this->_Contact[index]->getOneInfo(1) << std::endl;
-	std::cout << std::setw(10) << "Nickname: " << this->_Contact[index]->getOneInfo(2) << std::endl;
-	std::cout << std::setw(10) << "Phone number: " << this->_Contact[index]->getOneInfo(3) << std::endl;
-	std::cout << std::setw(10) << "Darkest secret: " << this->_Contact[index]->getOneInfo(4) << std::endl;
+	std::cout << std::setw(10) << "First name: " << this->_Contact[index].getOneInfo(0) << std::endl;
+	std::cout << std::setw(10) << "Last name: " << this->_Contact[index].getOneInfo(1) << std::endl;
+	std::cout << std::setw(10) << "Nickname: " << this->_Contact[index].getOneInfo(2) << std::endl;
+	std::cout << std::setw(10) << "Phone number: " << this->_Contact[index].getOneInfo(3) << std::endl;
+	std::cout << std::setw(10) << "Darkest secret: " << this->_Contact[index].getOneInfo(4) << std::endl;
 }
 
 void PhoneBook::PrintIndex()
@@ -55,12 +52,12 @@ void PhoneBook::PrintIndex()
 	std::string	nbr;
 	
 	
-	while (index < 8 && this->_Contact[index])
+	while (index < 8 && this->_nbrContactSet > index)
 	{
 		std::cout << std::setw(10) << index + 1 << "|";
-		std::cout << std::setw(10) << this->_Contact[index]->GetInfo(0) << "|";
-		std::cout << std::setw(10) << this->_Contact[index]->GetInfo(1) << "|";
-		std::cout << std::setw(10) << this->_Contact[index]->GetInfo(2) << std::endl; 
+		std::cout << std::setw(10) << this->_Contact[index].GetInfo(0) << "|";
+		std::cout << std::setw(10) << this->_Contact[index].GetInfo(1) << "|";
+		std::cout << std::setw(10) << this->_Contact[index].GetInfo(2) << std::endl; 
 		index++;
 	}
 	if (!index)
@@ -70,7 +67,12 @@ void PhoneBook::PrintIndex()
 		while (1)
 		{
 			std::cout << "Enter index of contact: ";
-			std::cin >> nbr;
+			std::getline(std::cin, nbr);
+			if (std::cin.eof())
+			{
+				std::cout << "Error: end of file\n";
+				exit(0);
+			}
 			if (nbr.size() != 1 || !isdigit(nbr[0]))
 				std::cout << "Bad entry" << std::endl;
 			else
@@ -80,17 +82,10 @@ void PhoneBook::PrintIndex()
 					std::cout << "Bad entry" << std::endl;
 				else
 				{
-					std::cout << index << "index \n";
 					this->PrintContact(index - 1);
 					return ;
 				}
 			}
 		}
 	}
-}
-
-void PhoneBook::deleteContact()
-{
-	for (int i = 0; this->_Contact[i] && i < 8; i++)
-		delete this->_Contact[i];
 }

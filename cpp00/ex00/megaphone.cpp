@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 01:47:56 by apommier          #+#    #+#             */
-/*   Updated: 2022/04/20 05:18:29 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 12:00:25 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ int	main(int ac, char **av)
 		}
 		i = 0;
 		while (av[++i])
-			std::cout << av[i] << std::endl;
+			std::cout << av[i];
 	}
 	else
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	std::cout << std::endl;
 	return (0);
 }

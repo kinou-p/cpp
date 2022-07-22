@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 15:55:40 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/21 20:01:53 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 12:46:19 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,25 @@ void	add_contact(PhoneBook *Book )
 	int			index = 0;
 	std::string	line;
 	std::string	info[5];
-	Contact *Contact = new class Contact;
-	
+	Contact Contact;
+
 	while (index < 5)
 	{
 		PrintMessage(index);
 		std::getline(std::cin, line);
+		if (std::cin.eof())
+		{
+			std::cout << "\nError: end of file\n";
+			exit(0);
+		}
 		info[index] = line;
 		if (index == 3 && line.find_first_not_of("0123456789") != std::string::npos)
 			index = 3;
 		else if (!line.empty() && line.find_last_not_of(" ") != std::string::npos )
 			index++;
 	}
-	Contact->FillContact(info);
-	Book->StoreContact(Contact);
+	Contact.FillContact(info);
+	Book->StoreContact(&Contact);
 }
 
 int	main(int ac, char **av)
@@ -61,21 +66,21 @@ int	main(int ac, char **av)
 		std::cout << "Too much arguments\n";
 		return (0);
 	}
-	std::cout << "Enter a command : ADD | SEARCH | EXIT" << std::endl;
 	while (line != "EXIT")
 	{
+		std::cout << "Enter a command : ADD | SEARCH | EXIT" << std::endl;
 		std::getline(std::cin, line);
-		if (line != "SEARCH")
-			std::cout << "Enter a command : ADD | SEARCH | EXIT1" << std::endl;
+		if (std::cin.eof())
+		{
+			std::cout << "Error: end of file\n";
+			exit(0);
+		}
 		if (line == "ADD")
 			add_contact(&book);
 		else if (line == "SEARCH")
 			book.PrintIndex();
 		else if (line != "EXIT" && !line.empty())
 			std::cout << "Invalid command" << std::endl;
-		if (line != "SEARCH" && line.size())
-			std::cout << "Enter a command : ADD | SEARCH | EXIT2" << std::endl;
 	}
-	book.deleteContact();
 	return (0);
 }

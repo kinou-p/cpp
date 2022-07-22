@@ -125,7 +125,7 @@ void	Account::_displayTimestamp( void )
 	time (&rawtime);
 	timeinfo = localtime(&rawtime);
 	strftime (buffer, 20, "[%G%m%d_%H%M%S]", timeinfo);
+	/std::cout << buffer;
 	//const char *buffeer = "[19920104_091532]";
 	//std::cout << buffeer;
-	std::cout << buffer;
 }
