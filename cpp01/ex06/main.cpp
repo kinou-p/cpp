@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 23:40:41 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/22 09:44:33 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 09:54:21 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,20 @@ void harFilter(Harl harl, std::string level)
 			harl.complain("INFO");
 			harl.complain("WARNING");
 			harl.complain("ERROR");
+			break;
 		case 2 :
 			harl.complain("INFO");
 			harl.complain("WARNING");
-			harl.complain("ERROR");	
+			harl.complain("ERROR");
+			break;	
 		case 3 :
 			harl.complain("WARNING");
 			harl.complain("ERROR");
+			break;
+			
 		case 4 :
 			harl.complain("ERROR");
+			break;
 		default	:
 			std::cout << "[ Probably complaining about insignificant problems ]\n";
 	}	
@@ -42,7 +47,7 @@ int main(int ac, char **av)
 {
 	Harl harl;
 	
-	std::cout << ac << std::endl;
+	//std::cout << ac << std::endl;
 	if (ac != 2)
 	{
 		std::cerr << "Bad entry\n";

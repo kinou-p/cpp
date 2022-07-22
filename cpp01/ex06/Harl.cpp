@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/21 23:39:20 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/22 09:40:02 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 09:52:45 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,17 @@ void Harl::complain(std::string level)
 	}
 }
 
-int Harl::ChooseComplain(std::string level)
+int Harl::chooseComplain(std::string level)
 {
-	void		(Harl::*complaint[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	//void		(Harl::*complaint[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string	levelTab[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	for (int i = 0; i < 4 ; i++)
 	{
-		void (Harl::*selectedComplaint)( void ) = complaint[i];
+		//void (Harl::*selectedComplaint)( void ) = complaint[i];
 		if (level == levelTab[i])
 			return (i);
 	}
+	return (4);
 }
 
 
