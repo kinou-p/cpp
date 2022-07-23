@@ -6,15 +6,33 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:00:14 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/19 22:24:06 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/23 12:35:04 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-class ShrubberyCreationForm{
-	public :
+#include "ShrubberyCreationForm.hpp"
 
-	private :
-};
+ShrubberyCreationForm()
+{
+
+}
+
+ShrubberyCreationForm(const ShrubberyCreationForm& copy)
+{
+
+}
+
+~ShrubberyCreationForm()
+{
+
+}
+
+ShrubberyCreationForm	&operator=(const ShrubberyCreationForm& rhs)
+{
+
+}
+
+
                                                    
     //               _                              
     //              /;-._,-.____        ,-----.__

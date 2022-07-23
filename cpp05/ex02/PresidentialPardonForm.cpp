@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 13:00:12 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/23 13:43:44 by apommier         ###   ########.fr       */
+/*   Created: 2022/07/23 12:16:26 by apommier          #+#    #+#             */
+/*   Updated: 2022/07/23 12:35:33 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef  SHRUBBERYCREATIONFORM_HPP 
-# define SHRUBBERYCREATIONFORM_HPP 
+#include "PresidentialPardonForm.cpp"
 
-# include "AForm.hpp"
+PresidentialPardonForm()
+{
 
-class ShrubberyCreationForm : public AForm{
-	public :
-		
-		ShrubberyCreationForm();
-		ShrubberyCreationForm(const ShrubberyCreationForm& copy);
-		~ShrubberyCreationForm();
-		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm& rhs);
-		
-	private :
-};
+}
 
-#endif
+PresidentialPardonForm(const PresidentialPardonForm& copy)
+{
+
+}
+
+~PresidentialPardonForm()
+{
+
+}
+
+PresidentialPardonForm	&operator=(const PresidentialPardonForm& rhs)
+{
+
+}

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 21:20:34 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/19 12:36:43 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/23 12:37:20 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ HumanA::HumanA(const std::string name, Weapon &Weapon): _Weapon(Weapon)
 
 HumanA::~HumanA(void)
 {
-
 }
 
 void	HumanA::attack(void)

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef AFORM_HPP
+# define AFORM_HPP
 
 # include <ostream>
 # include <string>
@@ -20,20 +20,20 @@
 
 class Bureaucrat;
 
-class Form{
+class AForm{
 	public :
 
-		Form(int signedGrade, int executionGrade, std::string name);
-		Form(const Form& copy);
-		~Form();
-		Form	&operator=(const Form& rhs);
+		AForm(int signedGrade, int executionGrade, std::string name);
+		AForm(const AForm& copy);
+		~AForm();
+		AForm	&operator=(const AForm& rhs);
 
 		const std::string getName() const;
 		int	getSignedGrade() const;
 		int getExecutionGrade() const;
 		int getIsSigned() const;
 		
-		void	checkGrade() const;
+		void	checkGrade() const = 0;
 
 		void beSigned(Bureaucrat &bureaucrat);
 
@@ -72,6 +72,6 @@ class Form{
 		int					_executionGrade;
 };
 
-std::ostream &operator<<(std::ostream &out, const Form &form);
+std::ostream &operator<<(std::ostream &out, const AForm &Aform);
 
 #endif

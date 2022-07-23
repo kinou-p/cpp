@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 19:43:13 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/19 15:55:10 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/23 12:36:35 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class Weapon {
 		Weapon(std::string type);
 		~Weapon();
 		const std::string&	getType( void ) const;
-		//void setType(const std::string type);
 		void				setType(std::string newType);
 
 	private:
