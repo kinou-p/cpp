@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 00:58:18 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/22 15:25:06 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 13:23:04 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ class Fixed {
 		int _value;
 		const static int _fraction = 8; 
 };
+
+std::ostream &operator<<(std::ostream &out, const Fixed &nbr);
 
 #endif

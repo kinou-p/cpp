@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 13:44:22 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/10 13:57:30 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 13:10:33 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,6 @@ Zombie	*zombieHorde(int N, std::string name)
 	
 	Horde = new Zombie[N];
 	while (N--)
-	{
 		Horde[N].setName(name);
-		//Horde[N].announce();
-	}
 	return (Horde);
 }

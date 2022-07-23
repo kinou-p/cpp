@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:31:09 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/13 03:54:43 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 13:29:02 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,27 @@ int main( void )
 	float test = a.getRawBits();
 
 	std::cout << test << std::endl;
-	std::cout << "1--" << std::endl;
+	std::cout << "--1--" << std::endl;
 	std::cout << ++test << std::endl;
-	std::cout << "2--" << std::endl;
+	std::cout << "--2--" << std::endl;
 	std::cout << test << std::endl;
-	std::cout << "3--" << std::endl;
+	std::cout << "--3--" << std::endl;
 	std::cout << test++ << std::endl;
-	std::cout << "4--" << std::endl;
+	std::cout << "--4--" << std::endl;
 	std::cout << test << std::endl;
-	std::cout << "5--" << std::endl;
+	std::cout << "--5--" << std::endl;
 
+	std::cout << "--0--" << std::endl;
 	std::cout << a << std::endl;
-	std::cout << "1" << std::endl;
+	std::cout << "--1--" << std::endl;
 	std::cout << ++a << std::endl;
-	std::cout << "2" << std::endl;
+	std::cout << "--2--" << std::endl;
 	std::cout << a << std::endl;
-	std::cout << "3" << std::endl;
+	std::cout << "--3--" << std::endl;
 	std::cout << a++ << std::endl;
-	std::cout << "4" << std::endl;
+	std::cout << "--4--" << std::endl;
 	std::cout << a << std::endl;
-	std::cout << "5" << std::endl;
+	std::cout << "--5--" << std::endl;
 	
 	std::cout << b << std::endl;
 

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:37:24 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/22 12:32:50 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 12:57:45 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ class	PhoneBook {
 		void StoreContact(Contact *NewContact);
 		void PrintContact(int index);
 		void PrintIndex();
-		//void deleteContact();
 			
-			private:
+	private:
 	
 		int				_NbrContact;
 		int				_nbrContactSet;

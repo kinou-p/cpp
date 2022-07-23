@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 16:30:22 by apommier          #+#    #+#             */
-/*   Updated: 2022/06/10 13:22:55 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 12:57:34 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ class Zombie {
 
 };
 
-void randomChump(std::string name);
+void	randomChump(std::string name);
 Zombie	*newZombie(std::string name);

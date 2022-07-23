@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/15 10:37:15 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/21 09:55:59 by apommier         ###   ########.fr       */
+/*   Updated: 2022/07/22 12:57:52 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ class Contact {
 		std::string	getOneInfo(int index);
 
 	private:
-	
 	
 		std::string	_first_name;
 		std::string	_last_name;
