@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:31:03 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/22 13:36:04 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/01 12:25:54 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ std::ostream &operator<<(std::ostream &out, const Fixed &nbr)
 
 Fixed &Fixed::operator=(const Fixed& arg)
 {
-    std::cout << "Assignation operator called" << std::endl;
+    std::cout << "Copy assignment operator called" << std::endl;
     if (this != &arg)
         this->_value = arg.getRawBits();
     return (*this);
@@ -158,7 +158,7 @@ Fixed	&Fixed::operator++(void)
 Fixed	Fixed::operator++(int)
 {
 	Fixed ret(*this);
-    ret.operator++();
+	++(*this);
     return (ret);
 }
 
@@ -171,7 +171,7 @@ Fixed	&Fixed::operator--(void)
 Fixed	Fixed::operator--(int)
 {
 	Fixed ret(*this);
-    ret.operator--();
+	--(*this);
     return (ret);
 }
 
@@ -186,7 +186,7 @@ Fixed	&Fixed::min(Fixed& arg, Fixed& argTwo)
 
 const Fixed	&Fixed::min(const Fixed& arg, const Fixed& argTwo)
 {
-	if (arg< argTwo)
+	if (arg < argTwo)
 		return (arg);
 	return (argTwo);
 }

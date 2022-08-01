@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 05:22:53 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/14 01:10:29 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/01 13:23:46 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,6 @@ class ClapTrap {
 		int			getHitPoints(void) const;
 		int			getEnergyPoints(void) const;
 		int			getAttackDamage(void) const;
-
-		/*std::string	setName(std::string name);
-		int			setHitPoints(int hitPoints);
-		int			setEnergyPoints(int energyPoints);
-		int			setAttackDamage(int attackDamage);*/
 
 	private:
 
