@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 05:22:55 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/03 18:14:03 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 18:27:32 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,8 +87,12 @@ int main()
 	diamond.takeDamage(1);
 	diamond.takeDamage(300);
 	diamond.attack("Jean");
-	std::cout <<"DiamondTrap have " << diamond.getEnergyPoints() << " energy point(s)\n\n";
-
+	std::cout << "DiamondTrap have " << diamond.getEnergyPoints() << " energy point(s)\n\n";
+	
+	std::cout << std::endl;
+	DiamondTrap diamond2(diamond);
+	std::cout << std::endl;
+	std::cout << "New DiamondTrap have " << diamond.getEnergyPoints() << " energy point(s)\n\n";
 	
 	return (0);
 }
