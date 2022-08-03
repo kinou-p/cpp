@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 01:24:34 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/14 01:54:11 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 14:23:47 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ class FragTrap : public ClapTrap
 		FragTrap(std::string name);
 		FragTrap(const FragTrap& copy);
 		~FragTrap();
+		
 		FragTrap	&operator=(const FragTrap& rhs);
 		
+		void attack(const std::string& target);
 		void highFivesGuys(void);
 
 	private:

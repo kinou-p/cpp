@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 08:03:51 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/14 01:17:00 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 14:27:09 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,19 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap " << this->_name << " Destructor called" << std::endl;
 }
 
+void ScavTrap::attack(const std::string& target)
+{
+	if (this->_hitPoints <= 0)
+		std::cout << "ScavTrap " << this->_name << " could not attack because he died" << std::endl;
+	else if (this->_energyPoints <= 0)
+		std::cout << "ScavTrap " << this->_name << " could not attack because he don't have energy" << std::endl;
+	else 
+	{
+		std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+		this->_energyPoints--;
+	}
+}
+
 ScavTrap	&ScavTrap::operator=(const ScavTrap& rhs)
 {
 	std::cout << "ScavTrap " << this->_name << " Assignation operator called" << std::endl;
@@ -46,5 +59,8 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap& rhs)
 
 void ScavTrap::guardGate()
 {
-	std::cout << "ScavTrap " << this->_name << " came into Gatekeeper mode\n";
+	if (this->_hitPoints <= 0)
+		std::cout << "ScavTrap " << this->_name << " could not guard because he died" << std::endl;
+	else
+		std::cout << "ScavTrap " << this->_name << " came into Gatekeeper mode\n";
 }

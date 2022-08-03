@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 01:24:31 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/14 01:55:06 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 15:27:21 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,19 @@ FragTrap::~FragTrap()
 	std::cout << "FragTrap " << this->_name << " Destructor called" << std::endl;
 }
 
+void FragTrap::attack(const std::string& target)
+{
+	if (this->_hitPoints <= 0)
+		std::cout << "FragTrap " << this->_name << " could not attack because he died" << std::endl;
+	else if (this->_energyPoints <= 0)
+		std::cout << "FragTrap " << this->_name << " could not attack because he don't have energy" << std::endl;
+	else 
+	{
+		std::cout << "FragTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage!" << std::endl;
+		this->_energyPoints--;
+	}
+}
+
 FragTrap	&FragTrap::operator=(const FragTrap& rhs)
 {
 	std::cout << "FragTrap " << this->_name << " Assignation operator called" << std::endl;
@@ -46,5 +59,8 @@ FragTrap	&FragTrap::operator=(const FragTrap& rhs)
 
 void FragTrap::highFivesGuys(void)
 {
-	std::cout << "FragTrap " << this->_name << " ask you for a highfive\n";
+	if (this->_hitPoints <= 0)
+		std::cout << "FragTrap " << this->_name << " could not ask you for a highfive because he died" << std::endl;
+	else
+		std::cout << "FragTrap " << this->_name << " ask you for a highfive\n";
 }

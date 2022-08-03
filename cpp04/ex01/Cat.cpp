@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:11:37 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/17 19:03:24 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 13:20:30 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ Cat::Cat() : Animal()
 Cat::Cat(const Cat& copy) : Animal(copy)
 {
 	std::cout << "Cat Copy constructor called" << std::endl;
-	this->type = copy.getType();
-	//this->_Brain = copy.getType();
+	*this = copy;
 }
 
 Cat::~Cat()

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:05:22 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/17 18:36:09 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 13:21:28 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Animal::Animal()
 Animal::Animal(const Animal& copy)
 {
 	std::cout << "Animal Copy constructor called" << std::endl;
-	this->type = copy.getType();
+	*this = copy;
 }
 
 Animal::~Animal()

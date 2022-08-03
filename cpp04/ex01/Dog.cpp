@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:11:41 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/17 19:03:52 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 13:20:17 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Dog::Dog() : Animal()
 Dog::Dog(const Dog& copy) : Animal(copy)
 {
 	std::cout << "Dog Copy constructor called" << std::endl;
-	this->type = copy.getType();
+	*this = copy;
 }
 
 Dog::~Dog()

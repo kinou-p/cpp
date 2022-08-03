@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:04:10 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/17 11:29:39 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 13:26:10 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int main()
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
 	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	j->makeSound(); //will output the dog sound!
+	meta->makeSound();//will output the animal sound!
 	
 	delete meta;
 	delete j;
@@ -34,13 +34,16 @@ int main()
 	std::cout << std::endl;
 
 	const WrongAnimal* meta2 = new WrongAnimal();
-	const WrongAnimal* i2 = new WrongCat();
-	std::cout << i2->getType() << " " << std::endl;
-	i2->makeSound(); //will output the WrongAnimal sound!
+	const WrongAnimal* falseWrongCat = new WrongCat();
+	const WrongCat* realWrongCat = new WrongCat();
+	std::cout << falseWrongCat->getType() << " " << std::endl;
+	falseWrongCat->makeSound(); //will output the WrongAnimal sound!
 	meta2->makeSound(); //same
+	realWrongCat->makeSound();//will output the WrongCat sound!
 
+	delete realWrongCat;
 	delete meta2;
-	delete i2;
+	delete falseWrongCat;
 	
 	return 0;
 }
