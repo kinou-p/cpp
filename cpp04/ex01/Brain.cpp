@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 04:37:19 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/18 09:17:44 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 18:37:29 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,8 @@ Brain	&Brain::operator=(const Brain& rhs)
 	std::cout << "Brain assignement operator called" << std::endl;
 	if (this != &rhs)
 	{
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 100; i++)
 			this->_ideas[i] = rhs._ideas[i];
-		}
 	}
 	return (*this);
 }
