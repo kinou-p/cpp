@@ -6,11 +6,11 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:45 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/19 12:42:13 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/02 18:04:36 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
 int main()

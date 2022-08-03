@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 12:16:28 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/23 13:43:32 by apommier         ###   ########.fr       */
+/*   Created: 2022/08/02 18:21:41 by apommier          #+#    #+#             */
+/*   Updated: 2022/08/02 18:21:44 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 
 class PresidentialPardonForm : public AForm{
 	public :
-    
-        PresidentialPardonForm();
-        PresidentialPardonForm(const PresidentialPardonForm& copy);
-        ~PresidentialPardonForm();
-        PresidentialPardonForm	&operator=(const PresidentialPardonForm& rhs);
-        
+		
+		PresidentialPardonForm();
+		PresidentialPardonForm(const PresidentialPardonForm& copy);
+		~PresidentialPardonForm();
+		PresidentialPardonForm	&operator=(const PresidentialPardonForm& rhs);
+			
 	private :
 };
 

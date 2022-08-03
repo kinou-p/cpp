@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:42 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/22 11:13:32 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/02 18:18:19 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void		Bureaucrat::checkGrade() const
 		throw Bureaucrat::GradeTooHighException();
 }
 
-void Bureaucrat::signForm(Form form)
+void Bureaucrat::signForm(AForm form)
 {
 	try
 	{

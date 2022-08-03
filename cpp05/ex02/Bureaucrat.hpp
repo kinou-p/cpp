@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:43 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/19 12:52:52 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/02 18:19:30 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <ostream>
 # include <string>
 # include <iostream>
-# include "Form.hpp"
+# include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat{
 	public:
@@ -34,7 +34,7 @@ class Bureaucrat{
 		void		downGrade();
 		void		checkGrade() const;
 		
-		void signForm(Form form);
+		void signForm(AForm form);
 
 		class GradeTooLowException : public std::exception
 		{

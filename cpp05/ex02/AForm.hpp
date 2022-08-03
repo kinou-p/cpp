@@ -25,7 +25,7 @@ class AForm{
 
 		AForm(int signedGrade, int executionGrade, std::string name);
 		AForm(const AForm& copy);
-		~AForm();
+		virtual ~AForm() = 0;
 		AForm	&operator=(const AForm& rhs);
 
 		const std::string getName() const;
@@ -33,7 +33,7 @@ class AForm{
 		int getExecutionGrade() const;
 		int getIsSigned() const;
 		
-		void	checkGrade() const = 0;
+		void	checkGrade() const;
 
 		void beSigned(Bureaucrat &bureaucrat);
 
