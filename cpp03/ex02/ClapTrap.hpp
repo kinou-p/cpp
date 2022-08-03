@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 05:22:53 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/01 13:23:33 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/03 17:23:38 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ class ClapTrap {
 		int			getAttackDamage(void) const;
 
 	protected:
-
+		
+		ClapTrap();
 		std::string	_name;
 		int			_hitPoints;
 		int			_energyPoints;
