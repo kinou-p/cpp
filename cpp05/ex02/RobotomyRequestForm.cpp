@@ -12,22 +12,27 @@
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm()
+RobotomyRequestForm::RobotomyRequestForm()
 {
 
 }
 
-RobotomyRequestForm(const RobotomyRequestForm.hpp& copy)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm.hpp& copy)
 {
 
 }
 
-~RobotomyRequestForm()
+RobotomyRequestForm::~RobotomyRequestForm()
 {
 
 }
 
-RobotomyRequestForm.hpp	&operator=(const RobotomyRequestForm.hpp& rhs)
+RobotomyRequestForm.hpp	RobotomyRequestForm::&operator=(const RobotomyRequestForm.hpp& rhs)
 {
 
+}
+
+void RobotomyRequestForm::execute(Bureaucrat const & executor) const
+{
+    
 }

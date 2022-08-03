@@ -31,3 +31,8 @@ PresidentialPardonForm	&PresidentialPardonForm::operator=(const PresidentialPard
 {
 
 }
+
+void PresidentialPardonForm::execute(Bureaucrat const & executor) const
+{
+
+}

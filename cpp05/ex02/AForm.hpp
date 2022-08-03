@@ -36,6 +36,7 @@ class AForm{
 		void	checkGrade() const;
 
 		void beSigned(Bureaucrat &bureaucrat);
+		void execute(Bureaucrat const & executor) const;
 
 		class GradeTooLowException : public std::exception
 		{
@@ -63,7 +64,25 @@ class AForm{
 					return ("Signed grade is too low\n");
 				}	
 		};
+
+		class executionGradeTooLowException : public std::exception
+		{
+			public :
+				virtual const char* what() const throw()
+				{
+					return ("Execution grade is too low\n");
+				}	
+		};
 		
+		class formIsNotSignedException : public std::exception
+		{
+			public :
+				virtual const char* what() const throw()
+				{
+					return ("Form isn't signed\n");
+				}	
+		};
+
 	private :
 		
 		std::string const	_name;
