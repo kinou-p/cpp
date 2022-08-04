@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 08:03:53 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/03 17:25:11 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 14:05:18 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class ScavTrap : virtual public ClapTrap
 		
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap& copy);
-		~ScavTrap();
+		virtual ~ScavTrap();
 		
 		ScavTrap	&operator=(const ScavTrap& rhs);
 		

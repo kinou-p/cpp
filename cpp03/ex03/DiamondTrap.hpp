@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:32:51 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/03 18:10:08 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 14:05:25 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		
 		DiamondTrap(std::string name);
 		DiamondTrap(const DiamondTrap& copy);
-		~DiamondTrap();
+		virtual ~DiamondTrap();
 		
 		DiamondTrap	&operator=(const DiamondTrap& rhs);
 		

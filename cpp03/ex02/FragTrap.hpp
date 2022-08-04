@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 01:24:34 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/03 17:24:51 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 14:05:16 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class FragTrap : virtual public ClapTrap
 		
 		FragTrap(std::string name);
 		FragTrap(const FragTrap& copy);
-		~FragTrap();
+		virtual ~FragTrap();
 		
 		FragTrap	&operator=(const FragTrap& rhs);
 		

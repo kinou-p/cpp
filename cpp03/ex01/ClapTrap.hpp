@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 05:22:53 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/03 17:23:38 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 14:04:13 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class ClapTrap {
 
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap& copy);
-		~ClapTrap();
+		virtual ~ClapTrap();
 		ClapTrap	&operator=(const ClapTrap& rhs);
 
 		void attack(const std::string& target);
