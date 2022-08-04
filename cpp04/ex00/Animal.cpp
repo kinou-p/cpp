@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:05:22 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/17 11:13:43 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 16:48:25 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Animal::Animal()
 {
 	std::cout << "Animal Default constructor called" << std::endl;
-	this->type = "Animal";
+	this->type = "Basic Animal";
 }
 
 Animal::Animal(const Animal& copy)

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 02:11:42 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/17 19:04:03 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 14:14:24 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Dog : public Animal {
 
 		Dog();
 		Dog(const Dog& copy);
-		~Dog();
+		virtual ~Dog();
 		Dog	&operator=(const Dog& rhs);
 		Animal	&operator=( const Animal &rhs);
 		

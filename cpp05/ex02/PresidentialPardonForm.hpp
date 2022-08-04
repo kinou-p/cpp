@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 18:21:41 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/02 18:21:44 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 15:07:38 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class PresidentialPardonForm : public AForm{
 	public :
 		
 		PresidentialPardonForm();
+		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(const PresidentialPardonForm& copy);
 		~PresidentialPardonForm();
 		PresidentialPardonForm	&operator=(const PresidentialPardonForm& rhs);
@@ -26,6 +27,8 @@ class PresidentialPardonForm : public AForm{
 		void execute(Bureaucrat const & executor) const;
 			
 	private :
+
+		std::string _target;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:42 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/02 18:18:19 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 15:28:47 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ void Bureaucrat::signForm(AForm form)
 	}
 }
 
-void Bureaucrat::executeForm(Form const & form) const
+void Bureaucrat::executeForm(AForm const & form) const
 {
-
+	form.execute(*this);
 }

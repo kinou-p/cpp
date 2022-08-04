@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:00:12 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/23 13:43:44 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 18:54:10 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,16 @@ class ShrubberyCreationForm : public AForm{
 	public :
 		
 		ShrubberyCreationForm();
+		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm& copy);
 		~ShrubberyCreationForm();
 		ShrubberyCreationForm	&operator=(const ShrubberyCreationForm& rhs);
 
 		void execute(Bureaucrat const & executor) const;
 
-		
 	private :
+
+		std::string _target;
 };
 
 #endif

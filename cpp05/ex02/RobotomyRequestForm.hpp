@@ -19,14 +19,16 @@ class RobotomyRequestForm : public AForm{
 	public :
 		
 		RobotomyRequestForm();
+		RobotomyRequestForm(std::string target);
 		RobotomyRequestForm(const RobotomyRequestForm& copy);
 		~RobotomyRequestForm();
 		RobotomyRequestForm	&operator=(const RobotomyRequestForm& rhs);
 
 		void execute(Bureaucrat const & executor) const;
 
-		
 	private :
+
+		std::string _target;
 };
 
 #endif

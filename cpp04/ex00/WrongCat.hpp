@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 10:54:02 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/17 11:15:05 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 14:13:27 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class WrongCat : public WrongAnimal {
 
 		WrongCat();
 		WrongCat(const WrongCat& copy);
-		~WrongCat();
+		virtual ~WrongCat();
 		WrongCat	&operator=(const WrongCat& rhs);
 		
 		void makeSound(void) const;

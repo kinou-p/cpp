@@ -5,21 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 13:00:09 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/23 12:35:53 by apommier         ###   ########.fr       */
+/*   Created: 2022/08/04 15:14:32 by apommier          #+#    #+#             */
+/*   Updated: 2022/08/04 18:54:53 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm()
+RobotomyRequestForm::RobotomyRequestForm() : AForm(72, 45, "RobotomyRequestForm")
 {
 
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm.hpp& copy)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm(72, 45, "RobotomyRequestForm")
 {
+    this->_target = target;
+}
 
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& copy) : AForm(copy)
+{
+	*this = copy;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
@@ -27,12 +32,14 @@ RobotomyRequestForm::~RobotomyRequestForm()
 
 }
 
-RobotomyRequestForm.hpp	RobotomyRequestForm::&operator=(const RobotomyRequestForm.hpp& rhs)
+RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm& rhs)
 {
-
+    if (&rhs != this)
+        this->_target = rhs._target;
+    return (*this);
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-    
+    AForm::execute(executor);
 }

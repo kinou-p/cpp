@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:43 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/02 18:19:30 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/04 15:26:47 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Bureaucrat{
 		void		checkGrade() const;
 		
 		void signForm(AForm form);
-		void executeForm(Form const & form) const;
+		void executeForm(AForm const & form) const;
 
 		class GradeTooLowException : public std::exception
 		{
