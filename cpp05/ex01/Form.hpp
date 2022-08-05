@@ -23,6 +23,7 @@ class Bureaucrat;
 class Form{
 	public :
 
+		Form();
 		Form(int signedGrade, int executionGrade, std::string name);
 		Form(const Form& copy);
 		~Form();

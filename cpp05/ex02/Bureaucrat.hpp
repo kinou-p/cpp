@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:43 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/04 15:26:47 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/05 12:57:35 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class AForm;
 class Bureaucrat{
 	public:
 
+		Bureaucrat();
 		Bureaucrat(int grade, std::string name);
 		Bureaucrat(const Bureaucrat& copy);
 		~Bureaucrat();
@@ -34,7 +35,7 @@ class Bureaucrat{
 		void		downGrade();
 		void		checkGrade() const;
 		
-		void signForm(AForm form);
+		void signForm(AForm &form);
 		void executeForm(AForm const & form) const;
 
 		class GradeTooLowException : public std::exception

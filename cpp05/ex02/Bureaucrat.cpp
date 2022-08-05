@@ -6,11 +6,16 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:42 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/04 15:28:47 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/05 13:13:29 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat() : _name("unnamed bureaucrat")
+{
+	this->_grade = 150;
+}
 
 Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name)
 {
@@ -18,9 +23,9 @@ Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name)
 	this->checkGrade();
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& copy)
+Bureaucrat::Bureaucrat(const Bureaucrat& copy) : _name(copy.getName())
 {
-	*this = copy;
+	this->_grade = copy.getGrade();
 }
 
 Bureaucrat::~Bureaucrat()
@@ -74,7 +79,7 @@ void		Bureaucrat::checkGrade() const
 		throw Bureaucrat::GradeTooHighException();
 }
 
-void Bureaucrat::signForm(AForm form)
+void Bureaucrat::signForm(AForm &form)
 {
 	try
 	{
@@ -89,4 +94,5 @@ void Bureaucrat::signForm(AForm form)
 void Bureaucrat::executeForm(AForm const & form) const
 {
 	form.execute(*this);
+	std::cout << "<bureaucrat> executed <form>" << std::endl;
 }

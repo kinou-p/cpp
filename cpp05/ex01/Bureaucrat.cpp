@@ -6,11 +6,16 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:42 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/19 12:55:48 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/05 13:13:08 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+
+Bureaucrat::Bureaucrat() : _name("unnamed_bureaucrat")
+{
+	this->_grade = 150;
+}
 
 Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name)
 {
@@ -18,9 +23,9 @@ Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name)
 	this->checkGrade();
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& copy)
+Bureaucrat::Bureaucrat(const Bureaucrat& copy) : _name(copy.getName())
 {
-	*this = copy;
+	this->_grade = copy.getGrade();
 }
 
 Bureaucrat::~Bureaucrat()

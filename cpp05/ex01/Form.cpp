@@ -12,6 +12,13 @@
 
 #include "Form.hpp"
 
+Form::Form() : _name("unnamed form")
+{
+	this->_signedGrade = 1;
+	this->_executionGrade = 1;
+	this->_isSigned = 0;
+}
+
 Form::Form(int signedGrade, int executionGrade, std::string name) : _name(name)
 {
 	this->_signedGrade = signedGrade;

@@ -20,6 +20,7 @@
 class Bureaucrat{
 	public:
 
+		Bureaucrat();
 		Bureaucrat(int grade, std::string name);
 		Bureaucrat(const Bureaucrat& copy);
 		~Bureaucrat();

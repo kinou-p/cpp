@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 13:00:14 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/04 19:44:50 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/05 14:33:22 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,9 @@ ShrubberyCreationForm	&ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
+    AForm::checkExecution(executor);
     std::string name = this->_target + "_shrubbery";
-    std::cout << name << std::endl;
     (void)executor;
-    //AForm::checkExecution(executor);
     std::ofstream outfile(name.c_str());
     outfile << "                                                         .\n                                              .         :  \n                 .              .              ::     ::   \n                   .           .                :::  ::   \n                    :         :                   ::::.     ..   \n           ..        ::     ::            :        ::.    .:\n             :       :::  :::        .     ::    :::    .:.\n              ::       ::::      .  :       ::  :::   .::. \n               :::      ::        :::        : :::  .::.\n                `::.     :::     ::.         `::::.::.\n                 `:::.    :::. :::        :: :::::.\n                    `:::.  ::bd::          :::::.\n                      `:::.  :::.         ::::.   \n                        `::.  `:::.      ::::         \n                          `:::. `:::    ::::        \n                            :::. ::::  ::::       \n                              ::bd:::bd::::     \n                                ::::::::::\n                                ::::::::\n                                :::(o):  . .         \n                                ::o:::(...         \n                            `.. ::o::::         \n                               `):o::::         \n                                ::(o):::        \n                               .::::::         \n                               :::::::.          \n                              :::::::::. \n                          ...::::::::::...";
 }

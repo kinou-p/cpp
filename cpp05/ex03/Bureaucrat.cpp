@@ -6,16 +6,17 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:42 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/05 13:12:53 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/05 14:14:42 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("unnamed bureaucrat")
+Bureaucrat::Bureaucrat() : _name("unnamed_bureaucrat")
 {
 	this->_grade = 150;
 }
+
 
 Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name)
 {
@@ -79,3 +80,31 @@ void		Bureaucrat::checkGrade() const
 		throw Bureaucrat::GradeTooHighException();
 }
 
+void Bureaucrat::signForm(AForm &form)
+{
+	try
+	{
+		form.beSigned(*this);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << this->_name << " couldn’t sign " << form.getName() << " form because "<< e.what();
+	}
+}
+
+void Bureaucrat::executeForm(AForm const & form) const
+{
+	form.execute(*this);
+	std::cout << this->_name << " executed " << form.getName() << std::endl;
+}
+
+
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("Bureaucrat grade is too low\n");
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("Bureaucrat grade is too high\n");
+}
