@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 16:53:32 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/06 18:29:37 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/06 19:41:49 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	printConversion(double nbr)
 	if (nbr <= FLT_MAX && nbr >= -FLT_MAX)
 	{
 		std::cout << "float: " << static_cast<float>(nbr);
-		if (static_cast<float>(nbr) == floor(nbr))
+		if (nbr - static_cast<int>(nbr) == 0.0)
 			std::cout << ".0";
 		std::cout << "f" << std::endl;
 	}
@@ -58,7 +58,7 @@ void	printConversion(double nbr)
 
 //double cast
 	std::cout << "double: " << static_cast<double>(nbr);
-	if (static_cast<double>(nbr) == floor(nbr))
+	if (nbr - static_cast<int>(nbr) == 0.0)
 		std::cout << ".0";
 	std::cout << std::endl;
 }
@@ -68,7 +68,7 @@ int main(int ac, char **av)
 	double nbr;
 	std::stringstream ss;
 	std::string nbrStr;
-
+	
 	if (ac != 2)
 	{
 		std::cout << "Wrong number of arguments\n";
