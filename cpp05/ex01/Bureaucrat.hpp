@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:43 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/19 12:52:52 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/06 10:52:43 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,17 @@ class Bureaucrat{
 		void		checkGrade() const;
 		
 		void signForm(Form form);
-
+		
 		class GradeTooLowException : public std::exception
 		{
 			public :
-				virtual const char* what() const throw()
-				{
-					return ("Bureaucrat grade is too low\n");
-				}	
+				virtual const char* what() const throw();
 		};
 
 		class GradeTooHighException : public std::exception
 		{
 			public :
-				virtual const char* what() const throw()
-				{
-					return ("Bureaucrat grade is too high\n");
-				}	
+				virtual const char* what() const throw();
 		};
 		
 	private:

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:42 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/05 13:12:53 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/06 10:52:11 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,3 +79,12 @@ void		Bureaucrat::checkGrade() const
 		throw Bureaucrat::GradeTooHighException();
 }
 
+const char* Bureaucrat::GradeTooLowException::what() const throw()
+{
+	return ("Bureaucrat grade is too low\n");
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw()
+{
+	return ("Bureaucrat grade is too high\n");
+}

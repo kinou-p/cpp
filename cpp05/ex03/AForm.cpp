@@ -50,7 +50,7 @@ AForm	&AForm::operator=(const AForm& rhs)
 
 std::ostream &operator<<(std::ostream &out, const AForm &Aform)
 {
-	out << Aform.getName() << "Aform need at least " << Aform.getSignedGrade() << " grade to be signed and ";
+	out << Aform.getName() << " Aform need at least " << Aform.getSignedGrade() << " grade to be signed and ";
 	out << Aform.getExecutionGrade() << " grade to be executed, ";
 	if (Aform.getIsSigned())
 		out << Aform.getName() << " Aform is signed\n";
@@ -120,7 +120,6 @@ const char* AForm::signedGradeTooLowException::what() const throw()
 {
 	return ("Signed grade is too low\n");
 }	
-
 
 const char* AForm::executionGradeTooLowException::what() const throw()
 {

@@ -6,12 +6,13 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 15:14:32 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/05 14:30:26 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/05 16:13:44 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
+#include <time.h>
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm(72, 45, "RobotomyRequestForm")
 {
@@ -44,6 +45,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     AForm::checkExecution(executor);
     std::cout << "Brrrzrzrzrzzrzrzzrrzz...\n";
+    std::srand(time(NULL)); 
     if (std::rand() % 2)
         std::cout << this->_target << " has been robotomized\n";
     else

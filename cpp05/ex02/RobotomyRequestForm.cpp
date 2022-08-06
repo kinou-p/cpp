@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 15:14:32 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/04 18:54:53 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/05 16:14:19 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
     AForm::checkExecution(executor);
     std::cout << "Brrrzrzrzrzzrzrzzrrzz...\n";
+    std::srand(time(NULL)); 
     if (std::rand() % 2)
         std::cout << this->_target << " has been robotomized\n";
     else

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 11:54:01 by apommier          #+#    #+#             */
-/*   Updated: 2022/07/19 12:54:48 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/06 10:36:48 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Form	&Form::operator=(const Form& rhs)
 
 std::ostream &operator<<(std::ostream &out, const Form &form)
 {
-	out << form.getName() << "form need at least " << form.getSignedGrade() << " grade to be signed and ";
+	out << form.getName() << " form need at least " << form.getSignedGrade() << " grade to be signed and ";
 	out << form.getExecutionGrade() << " grade to be executed, ";
 	if (form.getIsSigned())
 		out << form.getName() << " form is signed\n";
@@ -98,4 +98,17 @@ void		Form::checkGrade() const
 		throw Form::GradeTooHighException();
 }
 
+const char* Form::GradeTooLowException::what() const throw()
+{
+	return ("Signed or Execution grade is too low\n");
+}	
 
+const char* Form::GradeTooHighException::what() const throw()
+{
+	return ("Signed or Execution grade is too high\n");
+}	
+
+const char* Form::signedGradeTooLowException::what() const throw()
+{
+	return ("Signed grade is too low\n");
+}

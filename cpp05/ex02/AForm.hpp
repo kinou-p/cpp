@@ -43,46 +43,31 @@ class AForm{
 		class GradeTooLowException : public std::exception
 		{
 			public :
-				virtual const char* what() const throw()
-				{
-					return ("Signed or Execution grade is too low\n");
-				}	
+				virtual const char* what() const throw();	
 		};
 
 		class GradeTooHighException : public std::exception
 		{
 			public :
-				virtual const char* what() const throw()
-				{
-					return ("Signed or Execution grade is too high\n");
-				}	
+				virtual const char* what() const throw();
 		};
 
 		class signedGradeTooLowException : public std::exception
 		{
 			public :
-				virtual const char* what() const throw()
-				{
-					return ("Signed grade is too low\n");
-				}	
+				virtual const char* what() const throw();
 		};
 
 		class executionGradeTooLowException : public std::exception
 		{
 			public :
-				virtual const char* what() const throw()
-				{
-					return ("Execution grade is too low\n");
-				}	
+				virtual const char* what() const throw();
 		};
 		
 		class formIsNotSignedException : public std::exception
 		{
 			public :
-				virtual const char* what() const throw()
-				{
-					return ("Form isn't signed\n");
-				}	
+				virtual const char* what() const throw();	
 		};
 
 	private :

@@ -6,7 +6,7 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 21:34:42 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/05 14:14:42 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/06 10:52:00 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ void Bureaucrat::executeForm(AForm const & form) const
 	form.execute(*this);
 	std::cout << this->_name << " executed " << form.getName() << std::endl;
 }
-
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {

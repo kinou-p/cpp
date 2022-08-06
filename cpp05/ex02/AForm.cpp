@@ -50,7 +50,7 @@ AForm	&AForm::operator=(const AForm& rhs)
 
 std::ostream &operator<<(std::ostream &out, const AForm &Aform)
 {
-	out << Aform.getName() << "Aform need at least " << Aform.getSignedGrade() << " grade to be signed and ";
+	out << Aform.getName() << " Aform need at least " << Aform.getSignedGrade() << " grade to be signed and ";
 	out << Aform.getExecutionGrade() << " grade to be executed, ";
 	if (Aform.getIsSigned())
 		out << Aform.getName() << " Aform is signed\n";
@@ -102,8 +102,31 @@ void AForm::checkExecution(Bureaucrat const & executor) const
 {
 	if (!this->_isSigned)
 		throw AForm::formIsNotSignedException();
-	else if (executor.getGrade() > this->_signedGrade)
+	else if (executor.getGrade() > this->_executionGrade)
 		throw AForm::executionGradeTooLowException();
 }
 
+const char* AForm::GradeTooLowException::what() const throw()
+{
+	return ("Signed or Execution grade is too low\n");
+}	
 
+const char* AForm::GradeTooHighException::what() const throw()
+{
+	return ("Signed or Execution grade is too high\n");
+}	
+
+const char* AForm::signedGradeTooLowException::what() const throw()
+{
+	return ("Signed grade is too low\n");
+}	
+
+const char* AForm::executionGradeTooLowException::what() const throw()
+{
+	return ("Can't execute because Execution grade is too low\n");
+}	
+
+const char* AForm::formIsNotSignedException::what() const throw()
+{
+	return ("Can't execute because Form isn't signed\n");
+}
