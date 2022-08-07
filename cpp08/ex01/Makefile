@@ -6,16 +6,17 @@
 #    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/07 20:32:52 by apommier          #+#    #+#              #
-#    Updated: 2022/08/07 20:33:01 by apommier         ###   ########.fr        #
+#    Updated: 2022/08/07 22:48:52 by apommier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= a.out
-SRCS	= main.cpp
+SRCS	= main.cpp\
+			Span.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CFLAGS	= -Wall -Wextra -Werror -std=c++98 -g
 RM		= rm -rf
 
 .cpp.o:

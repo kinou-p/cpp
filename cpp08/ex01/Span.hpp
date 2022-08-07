@@ -6,9 +6,13 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 20:33:52 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/07 22:04:22 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/07 23:23:13 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <algorithm>
+#include <iostream>
+#include <vector>
 
 class Span{
 	public :
@@ -17,17 +21,17 @@ class Span{
 		Span(unsigned int size);
 		Span(const Span &copy);
 		~Span();
-		void	addNumber();
+		void	addNumber(int);
 		int		shortestSpan();
 		int		longestSpan();
-		void	addRangeOfIterators();
+		void	addRangeOfIterators(int *nb, int size);
 
 		Span	&operator=( const Span &rhs );
 		
 		class fullContainer : public std::exception {
 			char const *what() const throw() 
 			{
-				return ("Container is full !");
+				return ("Container can't accept those number because he doesn't have enough memory !");
 			}
 		};
 
@@ -42,4 +46,4 @@ class Span{
 
 		std::vector<int>	_storage;
 		int _storageSize;
-}
+};
