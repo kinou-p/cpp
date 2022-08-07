@@ -6,7 +6,7 @@
 #    By: apommier <apommier@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/06 20:21:51 by apommier          #+#    #+#              #
-#    Updated: 2022/08/06 20:21:55 by apommier         ###   ########.fr        #
+#    Updated: 2022/08/07 16:46:31 by apommier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ SRCS	= main.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 CC		= c++
-CFLAGS	= -Wall -Wextra -Werror -std=c++98
+CFLAGS	= -Wall -Wextra -Werror -g -std=c++98
 RM		= rm -rf
 
 .cpp.o:

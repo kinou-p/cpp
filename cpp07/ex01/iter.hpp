@@ -6,7 +6,13 @@
 /*   By: apommier <apommier@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 20:21:25 by apommier          #+#    #+#             */
-/*   Updated: 2022/08/06 20:21:26 by apommier         ###   ########.fr       */
+/*   Updated: 2022/08/07 15:43:16 by apommier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+template<typename T>
+void	iter(T *tab, int size, void (*ft)(const T &))
+{
+	for (int i = 0; i < size; i++)
+		ft(tab[i]);
+}
